@@ -1,8 +1,16 @@
 # Título del Proyecto
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_K, el automatizador universitario de diligencias audiovisuales libre_
+
+## Descripción
+
+_Kaudal es un software libre para automatizador de workflows o flujos de trabajo de postproducción audiovisual (cine, tv y medios digitales) orientados a sistemas digitales tapeless y entornos de trabajo en red_
+
+_Kaudal is a free software for tapeless video post production (film, tv, digital media) workflow automation running on network storage environments_
 
 ## Comenzando 🚀
+
+@TODO: Continuar redactando el readme desde aqui abajo
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
