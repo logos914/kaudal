@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>institutionDepartment.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ff79c6;}
+.s1 { color: #f8f8f2;}
+.s2 { color: #f1fa8c;}
+</style>
+</head>
+<body bgcolor="#282a36">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+institutionDepartment.js</font>
+</center></td></tr></table>
+<pre><span class="s0">const </span><span class="s1">mongoose </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'mongoose'</span><span class="s1">);</span>
+<span class="s0">const </span><span class="s1">Schema </span><span class="s0">= </span><span class="s1">mongoose.Schema;</span>
+<span class="s0">const </span><span class="s1">institutionDivisionSchema </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'./institutionDivision'</span><span class="s1">);</span>
+
+<span class="s0">const </span><span class="s1">institutionDepartmentSchema </span><span class="s0">= new </span><span class="s1">Schema({</span>
+    <span class="s1">_id</span><span class="s0">: </span><span class="s1">mongoose.Schema.Types.ObjectId,</span>
+    <span class="s1">name</span><span class="s0">: </span><span class="s1">String,</span>
+    <span class="s1">type</span><span class="s0">: </span><span class="s1">{</span>
+        <span class="s1">type</span><span class="s0">: </span><span class="s1">String,</span>
+        <span class="s0">enum: </span><span class="s1">[</span><span class="s2">'DTO_TYPE_PRODUCTION'</span><span class="s1">, </span><span class="s2">'DTO_TYPE_TECHNICAL'</span><span class="s1">,</span>
+            <span class="s2">'DTO_TYPE_ARTISTICAL'</span><span class="s1">, </span><span class="s2">'DTO_TYPE_POSTPRODUCTION'</span><span class="s1">,</span>
+            <span class="s2">'DTO_TYPE_BROADCAST'</span><span class="s1">, </span><span class="s2">'DTO_TYPE_PUBLICATION'</span><span class="s1">]</span>
+    <span class="s1">},</span>
+    <span class="s1">divisions</span><span class="s0">: </span><span class="s1">[institutionDivisionSchema]</span>
+    
+
+<span class="s1">})</span>
+</pre>
+</body>
+</html>

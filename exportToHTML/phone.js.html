@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>phone.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ff79c6;}
+.s1 { color: #f8f8f2;}
+.s2 { color: #f1fa8c;}
+</style>
+</head>
+<body bgcolor="#282a36">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+phone.js</font>
+</center></td></tr></table>
+<pre><span class="s0">const </span><span class="s1">mongoose </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'mongoose'</span><span class="s1">);</span>
+<span class="s0">const </span><span class="s1">Schema </span><span class="s0">= </span><span class="s1">mongoose.Schema;</span>
+<span class="s0">const </span><span class="s1">phoneSchema </span><span class="s0">= new </span><span class="s1">Schema ({</span>
+    <span class="s1">type</span><span class="s0">: </span><span class="s1">{</span>
+        <span class="s1">type</span><span class="s0">: </span><span class="s1">String,</span>
+        <span class="s0">enum: </span><span class="s1">[</span><span class="s2">'PHONE_TYPE_MOBILE'</span><span class="s1">, </span><span class="s2">'PHONE_TYPE_WORK'</span><span class="s1">, </span><span class="s2">'PHONE_TYPE_HOME'</span><span class="s1">]</span>
+    <span class="s1">},</span>
+    <span class="s1">area</span><span class="s0">: </span><span class="s1">Number,</span>
+    <span class="s1">number</span><span class="s0">: </span><span class="s1">Number,</span>
+    <span class="s1">extension</span><span class="s0">: </span><span class="s1">Number</span>
+<span class="s1">});</span>
+
+</pre>
+</body>
+</html>

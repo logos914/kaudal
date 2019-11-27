@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>institution.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ff79c6;}
+.s1 { color: #f8f8f2;}
+.s2 { color: #f1fa8c;}
+</style>
+</head>
+<body bgcolor="#282a36">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+institution.js</font>
+</center></td></tr></table>
+<pre><span class="s0">const </span><span class="s1">mongoose </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'mongoose'</span><span class="s1">);</span>
+<span class="s0">const </span><span class="s1">Schema </span><span class="s0">= </span><span class="s1">mongoose.Schema;</span>
+<span class="s0">const </span><span class="s1">institutionOfficeSchema </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'./institutionOffice'</span><span class="s1">);</span>
+<span class="s0">const </span><span class="s1">phoneSchema </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'./phone'</span><span class="s1">);</span>
+<span class="s0">const </span><span class="s1">addressSchema </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'./address'</span><span class="s1">);</span>
+<span class="s0">const </span><span class="s1">socialNetworkLinkSchema </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'./socialNetworkLink'</span><span class="s1">);</span>
+<span class="s0">const </span><span class="s1">institutionDepartmentSchema </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'./institutionDepartment'</span><span class="s1">);</span>
+
+<span class="s0">const </span><span class="s1">institutionSchema </span><span class="s0">= new </span><span class="s1">Schema ({</span>
+    <span class="s1">_id</span><span class="s0">: </span><span class="s1">mongoose.Schema.Types.ObjectID,</span>
+    <span class="s1">name</span><span class="s0">: </span><span class="s1">{</span>
+        <span class="s1">type</span><span class="s0">: </span><span class="s1">String,</span>
+        <span class="s1">required</span><span class="s0">: true</span>
+    <span class="s1">},</span>
+    <span class="s1">type</span><span class="s0">: </span><span class="s1">String,</span>
+    <span class="s1">departments</span><span class="s0">: </span><span class="s1">[institutionDepartmentSchema],</span>
+    <span class="s1">offices</span><span class="s0">: </span><span class="s1">[institutionOfficeSchema],</span>
+    <span class="s1">address</span><span class="s0">: </span><span class="s1">addressSchema,</span>
+    <span class="s1">phone</span><span class="s0">: </span><span class="s1">phoneSchema,</span>
+    <span class="s1">email</span><span class="s0">: </span><span class="s1">String,</span>
+    <span class="s1">web</span><span class="s0">: </span><span class="s1">String,</span>
+    <span class="s1">socialNetworkProfiles</span><span class="s0">: </span><span class="s1">[socialNetworkLinkSchema],</span>
+    <span class="s1">slogan</span><span class="s0">: </span><span class="s1">String,</span>
+    <span class="s1">logo</span><span class="s0">: </span><span class="s1">String</span>
+
+
+
+<span class="s1">});</span>
+
+
+<span class="s0">let </span><span class="s1">Institution </span><span class="s0">= </span><span class="s1">mongoose.model(</span><span class="s2">'institutions'</span><span class="s1">, institutionSchema);</span>
+<span class="s1">module.exports </span><span class="s0">= </span><span class="s1">Institution;</span></pre>
+</body>
+</html>

@@ -23,8 +23,11 @@ exports.loginWithCredential = function(req, res) {
     User.find({alias:  req.body.username},
         function (err,user) {
 
-        console.log("Piden por " + req.body.username);
-        console.log("Se encontro a " + user[0].iterator);
+        console.log(user);
+
+        if (user.length > 0) {
+            console.log("Piden por " + req.body.username);
+            console.log("Se encontro a " + user[0].iterator);
 
 
 
@@ -60,6 +63,9 @@ exports.loginWithCredential = function(req, res) {
                     message: 'Login error'
                 })
             }
+        }
+
+
 
 
     });

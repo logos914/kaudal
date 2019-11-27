@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>socialNetworkLink.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ff79c6;}
+.s1 { color: #f8f8f2;}
+.s2 { color: #f1fa8c;}
+</style>
+</head>
+<body bgcolor="#282a36">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+socialNetworkLink.js</font>
+</center></td></tr></table>
+<pre><span class="s0">const </span><span class="s1">mongoose </span><span class="s0">= </span><span class="s1">require(</span><span class="s2">'mongoose'</span><span class="s1">);</span>
+<span class="s0">const </span><span class="s1">Schema </span><span class="s0">= </span><span class="s1">mongoose.Schema;</span>
+<span class="s0">const </span><span class="s1">socialNetworkLinkSchema </span><span class="s0">= new </span><span class="s1">Schema ({</span>
+    <span class="s1">network</span><span class="s0">: </span><span class="s1">{</span>
+        <span class="s1">type</span><span class="s0">: </span><span class="s1">String,</span>
+        <span class="s0">enum: </span><span class="s1">[</span><span class="s2">'facebook'</span><span class="s1">,</span><span class="s2">'youtube'</span><span class="s1">,</span><span class="s2">'twitter'</span><span class="s1">,</span>
+            <span class="s2">'instagram'</span><span class="s1">,</span><span class="s2">'igtv'</span><span class="s1">,</span><span class="s2">'linkedin'</span><span class="s1">, </span><span class="s2">'whatsapp'</span><span class="s1">,</span>
+            <span class="s2">'telegram'</span><span class="s1">, </span><span class="s2">'snapchat' </span><span class="s1">, </span><span class="s2">'pinterest' </span><span class="s1">, </span><span class="s2">'reddit' </span><span class="s1">,</span>
+            <span class="s2">'taringa' </span><span class="s1">, </span><span class="s2">'foursquare' </span><span class="s1">, </span><span class="s2">'unitv-play' </span><span class="s1">,</span>
+            <span class="s2">'discord'</span><span class="s1">, </span><span class="s2">'twitch'  </span><span class="s1">],</span>
+        <span class="s1">required</span><span class="s0">: true</span>
+    <span class="s1">},</span>
+    <span class="s1">profileUrl</span><span class="s0">: </span><span class="s1">{</span>
+        <span class="s1">type</span><span class="s0">: </span><span class="s1">String,</span>
+        <span class="s1">required</span><span class="s0">: true</span>
+    <span class="s1">},</span>
+    <span class="s1">userName</span><span class="s0">: </span><span class="s1">String,</span>
+    <span class="s1">userID</span><span class="s0">: </span><span class="s1">String</span>
+
+<span class="s1">});</span>
+
+</pre>
+</body>
+</html>
